@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import {Link} from 'react-router-dom'
+import Card from './Card';
+
 
 function Copid() {
   useEffect(() => {
@@ -10,17 +13,23 @@ function Copid() {
 
   const fetchItems = async () => {
     const data = await fetch(
-      'http://fortnite-public-api.theapinetwork.com/prod09/upcoming/get'
-    );
+      'https://fortnite-api.com/v1/playlists', { mode: 'cors', headers: {'Access-Control-Allow-Origin':'*'}
+      });
+    // .then(response => response.json())
 
     const items = await data.json();
-    console.log(items);
-    setItems(items);
+    console.log(items.data);
+    setItems(items.data);
   }
   return (
-    <div>
+    <div className='card-wrapper'>
       {items.map(item => (
-        <h1>{items.name}</h1>
+        // <h1 key={item.id}>
+        //   <Link to={'/covid/${item.id}'}>
+        //     {item.name}
+        //   </Link>
+        // </h1>
+        <Card item={item} key={item.id}></Card>
       ))}
     </div>
   );

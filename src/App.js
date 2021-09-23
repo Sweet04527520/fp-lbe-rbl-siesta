@@ -4,6 +4,7 @@ import Nav from './Nav';
 import About from './About';
 import Todopage from './Todopage';
 import Copid from './Copid';
+import Bannerdetail from './Bannerdetail';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
         <Route path="/" exact component={Home} />
         <Route path="/about" component={About} />
         <Route path="/todopage" component={Todopage} />
-        <Route path="/covid" component={Copid} />
+        <Route path="/covid" exact component={Copid} />
+        <Route path="/covid/:id"component={Bannerdetail}/>
         </Switch>
     </div>
     </Router>
