@@ -8,6 +8,8 @@ function Card({item}) {
             <p> {item.devName} </p>
             <Link to={`/covid/${item.id}`}>
                 {item.name}
+                {/* {item.description} */}
+                {/* {item.images.showcase} */}
             </Link>
         </div>
     )

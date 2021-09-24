@@ -24,12 +24,7 @@ function Copid() {
   return (
     <div className='card-wrapper'>
       {items.map(item => (
-        // <h1 key={item.id}>
-        //   <Link to={'/covid/${item.id}'}>
-        //     {item.name}
-        //   </Link>
-        // </h1>
-        <Card item={item} key={item.id}></Card>
+        <Card item={item} key={item.images.showcase}></Card>
       ))}
     </div>
   );
