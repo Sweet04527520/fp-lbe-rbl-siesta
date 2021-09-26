@@ -25,11 +25,12 @@ function Item() {
   return (
     
     <div>
-        <p>{info.name}</p>
+        <h1>{info.name}</h1>
         {/* {<p>{info.gameType}</p>} */}
         {/* {<p>{info.description}</p>} */}
         {/* <p>{info.images.showcase}</p> */}
-        <img src={info.images.showcase} width='1000px'/>
+        <img src={info.images.showcase} width='800px'/>
+        <p>{info.description}</p>
         {/* {<p>{info.images.showcase}</p>} */}
       {/* <h1>Item</h1> */}
     </div>

@@ -1,10 +1,14 @@
 import React from 'react';
 import './App.css';
+// import { Stylesheet, Text, View, ImageBackground } from 'react-native';
+
 import Nav from './Nav';
 import About from './About';
 import Todopage from './Todopage';
 import Copid from './Copid';
 import Bannerdetail from './Bannerdetail';
+import Profile from './whatever/Profile'
+
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
@@ -13,7 +17,7 @@ function App() {
       <div className="App">
       <Nav />
         <Switch>
-        <Route path="/" exact component={Home} />
+        <Route path="/" exact component={Profile} />
         <Route path="/about" component={About} />
         <Route path="/todopage" component={Todopage} />
         <Route path="/covid" exact component={Copid} />
@@ -24,10 +28,10 @@ function App() {
   );
 }
 
-const Home = () => (
-  <div>
-    <h1>Home Page</h1>
-  </div>
-);
+// const Home = () => (
+//   <div>
+//     <h1>Home Page</h1>
+//   </div>
+// );
 
 export default App;
